@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/normalize.css">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;600;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Doodle Cord</h1>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div id="login">
+            <form action={{ url_for('login') }} id="loginForm" method="POST">
+                <h2>Login:</h2>
+                {{ form.csrf_token }}
+                <!-- {{ form.hidden_tag() }} -->
+                <label for="form.usrnm">Username:</label>
+                {{ form.usrnm(placeholder="Username...") }}
+                <label for="form.pswd">Password:</label>
+                {{ form.pswd(placeholder="Password...") }}
+
+                <!-- <label for="usrnm">Username:</label>
+                <input type="text" name="usnrm" id="usrnm" placeholder="Username..."> <br>
+                <label for="pswd">Password:</label>
+                <input type="password" name="pswd" id="pswd" placeholder="Password..."> <br> -->
+                <button type="submit">Login</button> <br>
+                <a href={{ url_for('register') }}>Create Account</a>
+            </form>
+
+        </div>
+</div>  
+
+</body>
+</html>

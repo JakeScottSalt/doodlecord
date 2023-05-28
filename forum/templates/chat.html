@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+    {% block content %}    
+    
+        <div class="container">
+            <!-- <aside class="msglist">
+                <p>Conversation list</p>
+            </aside> -->
+            <div class="convo">
+                <div class="messages">
+                    <h2 style="margin-bottom: 1em;" id="chatName"></h2>
+                    <!-- {{ current_user.fName }} -->
+                </div>
+                <div class="textfield">
+                        <input type="hidden" id="usrnm" value={{ current_user.fName }}>
+                        <textarea name="msgIn" id="msgIn" placeholder="Enter message..."></textarea>
+                        <button type="submit" id="submit"><i class="fa fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+        
+
+        <script>
+            const socket = io.connect('http://webtech-51.napier.ac.uk:5000');
+            const messages = document.querySelector('.messages');
+            const chat_name = document.getElementById('chatName');
+            const usr = document.getElementById('usrnm').value;
+            // console.log("Username: " + usr);
+            const text = document.getElementById('msgIn');
+            const send = document.getElementById('submit');
+            const txtmsg = text.value
+            // usr = str(usr);
+            let payload = [usr, text.value];
+            let history = '{chat_name : [{}]}';
+
+
+            // array = [usr, text.value];
+
+            // document.getElementById('test').innerHTML = text.value;
+
+            send.addEventListener('click', () => {
+                payload[1] = text.value;
+                if(text.value !== '' && text.value !== ' '){ 
+                    socket.emit('chat_message', payload);
+                    console.log("Message Sent");
+                    text.value = '';
+                } 
+            });
+
+            socket.on('chat_reply', (payload) => {
+                console.log("Reply Recieved");
+                console.table(payload);
+                txtElement(payload[0], payload[1], messages);
+                history = '{chat_name [{"usrnm" : payload[0], "msg" : payload[1]}]}';
+            });
+
+            function upfdtDb(history){
+                let chats = JSON.parse(history);
+                return chats;
+            }
+
+            function txtElement(sender, txt, parent){
+                console.log("Text Element Called");
+                let txtEl = document.createElement('p');
+                let sndr = document.createElement('p');
+                let txtSndr = document.createTextNode(sender + ": ");
+                let txtNd = document.createTextNode(txt);
+                sndr.classList.add('sndr');
+                txtEl.classList.add('msg');
+                sndr.appendChild(txtSndr);
+                txtEl.appendChild(txtNd);
+                parent.appendChild(sndr);
+                parent.appendChild(txtEl);
+            }
+
+        </script>
+
+        <!-- <script>
+            let form = {{ current_user.fName }};
+
+            document.getElementById('test').innerHTML = form;
+        </script> -->
+
+    {% endblock %}}

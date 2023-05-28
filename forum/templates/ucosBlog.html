@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+   
+{% block content %}
+
+    <div class="container">
+        <h2>UCOS - Blog</h2>
+
+        <div class="blogArea">
+            <div class="blogFile">
+                <div class="author">
+                    <h2> Written by: {{ ucos.author }} </h2>
+                 </div>
+                 <div class="date">
+                     <h3> Article date: {{ ucos.date }} </h3>
+                 </div>
+                 <div class="post">
+                    <p> {{ ucos.post }} </p>
+                 </div>    
+            </div>
+            <div class="blogEditor">
+                <form method="POST" action={{ url_for('ucosBlog') }} id="ForumPost">
+                    {{ form.csrf_token }}
+                    {{ form.fName(value="current_user") }}
+                    {{ form.post(placeholder="Enter text...") }}
+                    <button type="submit"><i class="fa fa-paper-plane"></i></button>
+                </form>
+    </div>
+    
+
+{% endblock %}

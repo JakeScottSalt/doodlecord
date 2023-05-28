@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <link rel="stylesheet" href="../static/css/normalize.css">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;600;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7bb1076aa9.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js" integrity="sha512-AcZyhRP/tbAEsXCCGlziPun5iFvcSUpEz2jKkx0blkYKbxU81F+iq8FURwPn1sYFeksJ+sDDrI5XujsqSobWdQ==" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href={{ url_for('root') }}>Home</a>
+            <a href={{ url_for('classes') }}>Class List</a>
+            <h1>Doodle Cord</h1>
+            <a href={{ url_for('messages') }}>Chat</a>
+            <a href={{ url_for('logout') }}>Logout</a>
+        </nav>
+    </header>
+
+    {% block content %} 
+    
+        
+    
+    {% endblock %}
+
+</body>
+</html>

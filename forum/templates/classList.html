@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+   
+{% block content %}
+
+    <div class="container">
+        <h2>Class List</h2>
+        <div class="cList">
+        
+                <div class="cItem">
+                    <p>User Centered Organizational Systems</p>
+                    <p><a href={{ url_for('ucosBlog') }}>Blog</a></p>
+                    <!-- <p><a href=>Chat</a></p> -->
+                </div>
+                <br>
+                <br>
+
+                <div class="cItem">
+                    <p>Advanced Web Tech</p>
+                    <p><a href={{ url_for('awtBlog') }}>Blog</a></p>
+                    <!-- <p><a href=>Chat</a></p> -->
+                </div>
+                <br>
+                <br>
+        </div>
+
+    </div>
+
+{% endblock %}}

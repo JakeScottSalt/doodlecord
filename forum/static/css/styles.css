@@ -1,0 +1,366 @@
+    /* --- Colours scheme --- */
+    /* Header & Nav colour: #6C9797   Text colour: #4A4A4A */
+    /* #C9C9C9 #7D7D7D */
+    /* #B5C9C9 */
+
+    /*---Start of main body styles---*/
+    *{
+        box-sizing: border-box;
+    }
+
+    p{
+        margin: 0;
+    }
+
+    body{
+        font-family: 'Titillium Web', sans-serif;
+    }
+
+    h2{
+        font-weight: 600;
+        text-align: center !important;
+    }
+    /*---End of main body styles*/
+
+    /*---Start of header styles---*/
+    header{
+        width: 100%;
+        background-color: #6C9797;
+    }
+
+    nav{
+        max-width: 100vw;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 2em;
+        color: #4A4A4A;
+    }
+
+    nav h1{
+        text-align: center;
+        font-weight: 600;
+        display: inline-block;
+    }
+
+    nav a{
+        padding: .5em;
+        margin-right: 1em;
+        margin-left: 1em; 
+        display: inline-block;
+        text-decoration: none;
+        color: #4A4A4A;
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    nav a:hover{
+        background-color: #B5C9C9;
+    }
+
+    /*---End of header styles---*/
+
+    /*---Start of Login styles---*/
+    .container{
+        width: 100%;
+        top: 0;
+        left: 0;
+      
+    }
+
+    #login, #register{
+        width: 100%;
+    }
+
+    #loginForm h2{
+        text-align: center;
+        color: #4A4A4A;
+    }
+
+    #loginForm input {
+        width: 100%;
+        display: inline-block;
+        border: #C9C9C9 solid 1.5px;
+        border-radius: .5em;
+        color: #4A4A4A;
+        overflow: auto;
+        padding: .1em;
+        margin: .5em 0;
+    }
+
+    #loginForm button{
+        padding: .5em;
+        font-size: 1em;
+        background-color: #6C9797;
+        border: #6C9797 solid;
+        border-radius: .5em;
+        color: #4A4A4A;
+        margin-top: .5em;
+    }
+
+    #loginForm a{
+        color: #6C9797;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    /*---End of Login styles---*/
+
+    .cList{
+        width: 100%;
+    }
+
+    .cItem{
+        width: 100%;
+        margin: .5em auto;
+        padding: 1.5em;
+    }
+
+    .cItem p{
+        width: 32%;
+        display: inline-block !important;
+        text-align: center;
+    }
+
+    .cItem a{
+        display: inline-block !important;
+        /* overflow: auto; */
+        text-align: right;
+        text-decoration: none;
+        color: #4A4A4A;
+    }
+
+    /*---Start of Class List styles--*/
+
+    
+
+    /*---End of Class List styles---*/
+
+
+    /*---Start of Message styles---*/
+
+    .msglist{
+        width: 0;
+    }
+
+    .convo{
+       width: 100%;
+    }
+
+    .messages{
+       width: 100%;
+       min-height: 60vh;
+       /* height: 60vh; */
+       max-height: 100vh;
+       margin: 0 auto;
+    }
+
+    .textfield{
+        width: 100%;
+    }
+ 
+    .textfield textarea{
+        /* width: 68%; */
+        margin-left: 2em;
+        resize: none;
+        border: 1px solid #4A4A4A;
+        border-radius: 1em;
+        padding: .5em;
+        font-size: 1em;
+    }
+
+    .textfield button{
+        margin-right: 2em;
+        margin-bottom: 1em;
+        vertical-align: middle;
+    }
+
+    .msg{
+        max-width: 30%;
+        width: max-content;
+        height: max-content;
+        overflow-wrap: break-word;
+        padding: 1em;
+        border: lightblue 1px solid;
+        border-radius: .5em;
+        background-color: lightblue;
+        color: black;
+        margin-bottom: 1em;
+        margin-left: 1em;
+    }
+
+    /*---End of Message styles---*/
+
+    /*---Start of Blog styling---*/
+
+    .blogArea{
+        width: 100%;
+        margin: 1.2em auto 0 auto;
+     }
+ 
+     .blogFile{
+        width: 100%;
+        min-height: 60vh;
+        /* height: 60vh; */
+        max-height: 100vh;
+        margin: 0 auto;
+     }
+     .blogArea{
+         width: 90%;
+         padding: .5em;
+         border-radius: .5em;
+         border: 1px solid #4A4A4A;
+     }
+
+     .date h3{
+         font-weight: 100;
+         padding: 0 1.5em;
+     }
+
+     .post p{
+        font-weight: 100;
+        padding: 0 1.5em;
+        text-align: left;
+    }
+ 
+     #ForumEditor{
+         width: 100%;
+         margin: 0 auto;
+     }
+  
+     #ForumPost textarea{
+        width: 90%;
+        margin-left: 2em;
+        resize: none;
+        min-height: 15vh;
+        height: auto;
+        overflow-x: none;
+        overflow-wrap: break-word;
+        border: 2px solid #4A4A4A;
+        border-radius: 1em;
+        padding: .5em;
+        font-size: 1em;
+     }
+ 
+     #ForumPost button{
+        margin-right: 2em;
+        margin-bottom: 1em;
+        vertical-align: text-bottom;
+        padding: .5em;
+        font-size: 1em;
+        background-color: #6C9797;
+        border: #6C9797 solid;
+        border-radius: .5em;
+        color: #4A4A4A;
+     }
+
+    /*---Start of Media Queries---*/
+
+@media only screen and (max-width: 600px){
+    nav h1{
+        order: 0;
+        display: block;
+        min-width: 100vw; 
+    }
+
+    nav a{
+        order: 1;
+    }
+
+    .textfield{
+        width: 100%;
+        margin: 0 auto;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+
+}
+
+
+@media only screen and (min-width: 600px){    
+    #login, #register{
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    #loginForm{
+        width: calc(60% - 2.4em);
+        height: auto;
+    }   
+
+    /*---Class List styles---*/
+    
+    .cList{
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .cItem{
+        border: #C9C9C9 solid 1.5px;
+    }
+   
+    /*---Start of Message styles---*/
+
+    /* .msglist{
+        top: 0;
+        left: 0;
+        width: 20%;
+        min-height: 60vh;
+        height: 85.3vh;
+        max-height: 100%;
+        display: inline-block;
+        /* top: 14.8%; 
+        border-right: 2px solid #4A4A4A;
+    } */
+
+    .convo{
+        width: 100%;
+        min-height: 60vh;
+        height: 85.3vh;
+        max-height: 100%;
+        display: inline-block;
+        position: absolute;
+        /* left: 20%; */
+    }
+
+    .messages{
+        display: inline-block;
+        width: 100%;
+        height: 80vh;
+        max-height: 100vh;
+        overflow-y: auto;
+        padding-left: .5em;
+    }
+
+    .textfield{
+        width: 100%;
+        /* margin: 0 auto; */
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .textfield textarea{
+        max-width: 90%; 
+        min-width: 60%;
+        width: 90%;
+        min-height: min-content;
+        resize: none;
+        border: 1px solid #4A4A4A;
+        border-radius: 1em;
+        padding: .5em;
+        font-size: 1em;
+        height: auto;
+        height: 2.5em;
+        text-align: left;
+        max-height: min-content;
+    }
+
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/normalize.css">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;600;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Doodle Cord</h1>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div id="register">
+            <form method="POST" action={{ url_for('register') }}  id="loginForm">
+                <h2>Sign Up:</h2>
+                
+                {{ form.csrf_token }}
+                <label for="form.usrnm">Username:</label>
+                {{ form.usrnm(placeholder="Username...") }}
+                <label for="form.fName">First Name:</label>
+                {{ form.fName(placeholder="First Name...") }}
+                <label for="form.sName">Surame:</label>
+                {{ form.sName(placeholder="Surname...") }}
+                <label for="form.email">Email:</label>
+                {{ form.email(placeholder="Email...") }}
+                <label for="form.pswd">Password:</label>
+                {{ form.pswd(placeholder="Password...") }}
+                <label for="form.confPswd">Confirm Password:</label>
+                {{ form.confPswd(placeholder="Confirm Password...") }}
+                <button type="submit">Create Account</button> <br><br>
+                <p>Already have an Account? Login <a href={{ url_for('login') }}>here.</a></p>
+            </form>
+
+        </div>
+</div>  
+
+</body>
+</html>
